@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .content-item {
+            width: calc(60% - 1rem);
+            margin-bottom: 1rem;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .content-item video,
+        .content-item embed,
+        .content-item audio,
+        .content-item img,
+        .content-item iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content-item h2 {
+            margin-top: 0.5rem;
+        }
+
+        .content-item p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">Biblioteca Sophia</a>
+            <div>
+                <a href="index.html" class="mr-4 hover:underline">Início</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mx-auto p-4 flex-grow flex flex-col items-center">
+        <h1 class="text-3xl font-bold mb-4">Resultados da Pesquisa</h1>
+        <div id="content-list" class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full justify-items-center"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white p-4">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Repositório Educacional - Biblioteca Sophia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contentList = document.getElementById('content-list');
+
+            // Obter os resultados da pesquisa da URL
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const searchParams = Object.fromEntries(urlSearchParams.entries());
+            const results = JSON.parse(searchParams.results);
+
+            // Exibir os resultados na página
+            results.forEach(content => {
+                const contentItem = document.createElement('div');
+                contentItem.className = 'bg-white p-4 rounded shadow content-item';
+
+                switch (content.type) {
+                    case 'video':
+                        const videoSrc = content.src.includes('youtube') ? content.src.replace('watch?v=', 'embed/') : content.src;
+                        contentItem.innerHTML = `
+                            <iframe width="560" height="315" src="${videoSrc}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="${content.src}" download="${content.title}.mp4" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                    case 'pdf':
+                        contentItem.innerHTML = `
+                            <embed src="${content.src}" type="application/pdf" width="100%" height="400px" />
+                            <a href="${content.src}" download="${content.title}.pdf" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                    case 'audiobook':
+                        contentItem.innerHTML = `
+                            <audio controls class="w-full">
+                                <source src="${content.src}" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="${content.src}" download="${content.title}.mp3" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                    case 'image':
+                        contentItem.innerHTML = `
+                            <img src="${content.src}" alt="${content.title}" class="w-full">
+                            <a href="${content.src}" download="${content.title}.jpg" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                    case 'animation':
+                        contentItem.innerHTML = `
+                            <img src="${content.src}" alt="${content.title}" class="w-full">
+                            <a href="${content.src}" download="${content.title}.gif" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                }
+
+                contentItem.innerHTML += `
+                    <h2 class="text-xl font-bold mt-4">${content.title}</h2>
+                    <p>${content.description}</p>
+                `;
+
+                contentList.appendChild(contentItem);
+            });
+        });
+    </script>
+</body>
+</html>
