@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteúdos</title>
+    <title>Pesquisa Sophia Educa</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         .content-item {
@@ -36,7 +36,7 @@
     <!-- Navbar -->
     <nav class="bg-blue-500 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Biblioteca Sophia</a>
+            <a href="index.html" class="text-2xl font-bold">Sophia Educa</a>
             <div>
                 <a href="index.html" class="mr-4 hover:underline">Início</a>
             </div>
@@ -52,7 +52,7 @@
     <!-- Footer -->
     <footer class="bg-blue-500 text-white p-4">
         <div class="container mx-auto text-center">
-            &copy; 2024 Repositório Educacional - Biblioteca Sophia. Todos os direitos reservados.
+            &copy; 2024 Repositório Educacional - Sophia Educa. Todos os direitos reservados.
         </div>
     </footer>
 
@@ -105,6 +105,12 @@
                         contentItem.innerHTML = `
                             <img src="${content.src}" alt="${content.title}" class="w-full h-250px object-cover">
                             <a href="${content.src}" download="${content.title}.gif" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                        `;
+                        break;
+                    case 'apresentacao':
+                        contentItem.innerHTML = `
+                            <iframe src="${content.src}/preview" width="100%" height="400px" allowfullscreen></iframe>
+                            <a href="${content.src}" download="${content.title}.pptx" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                 }

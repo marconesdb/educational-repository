@@ -117,5 +117,14 @@
     "title": "Animação de Geografia",
     "description": "Meio Ambiente",
     "src": "meio-ambiente.gif"
+  },
+
+  {
+    "type": "apresentacao",
+    "title": "Palestra de Geografia teste",
+    "description": "Meio Ambiente",
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx"
   }
 ]
+
+
