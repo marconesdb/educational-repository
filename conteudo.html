@@ -19,7 +19,8 @@
         .content-item img,
         .content-item iframe {
             max-width: 100%;
-            height: auto;
+            height: 250px; /* Defina a altura fixa aqui */
+            object-fit: cover; /* Para manter a proporção */
         }
 
         .content-item h2 {
@@ -73,7 +74,7 @@
                     case 'video':
                         const videoSrc = content.src.includes('youtube') ? content.src.replace('watch?v=', 'embed/') : content.src;
                         contentItem.innerHTML = `
-                            <video preload="metadata" width="560" height="315" controls>
+                            <video preload="metadata" width="100%" height="250px" controls>
                                 <source src="${content.src}" type="video/mp4">
                                 Seu navegador não suporta o elemento de vídeo.
                             </video>
@@ -82,28 +83,27 @@
                         break;
                     case 'pdf':
                         contentItem.innerHTML = `
-                            <embed src="${content.src}" type="application/pdf" width="100%" height="400px" />
+                            <embed src="${content.src}" type="application/pdf" width="100%" height="250px" />
                             <a href="${content.src}" download="${content.title}.pdf" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'audiobook':
-                        contentItem.innerHTML = `
-                            <audio controls class="w-full">
-                                <source src="${content.src}" type="audio/mpeg">
-                                Seu navegador não suporta o elemento de áudio.
-                            </audio>
+                        const audio = new Audio(content.src);
+                        audio.controls = true;
+                        contentItem.appendChild(audio);
+                        contentItem.innerHTML += `
                             <a href="${content.src}" download="${content.title}.mp3" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'image':
                         contentItem.innerHTML = `
-                            <img src="${content.src}" alt="${content.title}" class="w-full">
+                            <img src="${content.src}" alt="${content.title}" class="w-full h-250px object-cover">
                             <a href="${content.src}" download="${content.title}.jpg" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'animation':
                         contentItem.innerHTML = `
-                            <img src="${content.src}" alt="${content.title}" class="w-full">
+                            <img src="${content.src}" alt="${content.title}" class="w-full h-250px object-cover">
                             <a href="${content.src}" download="${content.title}.gif" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
