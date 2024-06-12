@@ -73,7 +73,10 @@
                     case 'video':
                         const videoSrc = content.src.includes('youtube') ? content.src.replace('watch?v=', 'embed/') : content.src;
                         contentItem.innerHTML = `
-                            <iframe width="560" height="315" src="${videoSrc}" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <video preload="metadata" width="560" height="315" controls>
+                                <source src="${content.src}" type="video/mp4">
+                                Seu navegador não suporta o elemento de vídeo.
+                            </video>
                             <a href="${content.src}" download="${content.title}.mp4" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
