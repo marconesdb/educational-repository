@@ -6,15 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa Python Start</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #FFD43B; /* Tailwind yellow-400 */
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #FFD43B; /* Tailwind yellow-400 */
+        }
+
+        .fixed-height {
+            height: 20rem; /* Defina uma altura fixa consistente para todos os cards */
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav class="bg-blue-500 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">Python Start</a>
-            <div>
-                <a href="index.html" class="mr-4 hover:underline">Início</a>
+            <div class="navbar-logo">
+                <img src="./img/icone-python.png" alt="Ícone Python">
+                <a href="index.html" class="text-2xl font-bold">Python Start</a>
+            </div>
+            <div class="nav-items">
+                <a href="index.html">
+                    <li class="list-none">Início</li>
+                </a>
+                <div class="dropdown">
+                    <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -22,7 +91,7 @@
     <!-- Conteúdo Principal -->
     <div class="container mx-auto p-4 flex-grow">
         <h1 class="text-3xl font-bold mb-4 text-center">Resultados da Pesquisa</h1>
-        <div id="content-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 justify-items-center"></div>
+        <div id="content-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center"></div>
     </div>
 
     <!-- Footer -->
@@ -45,7 +114,7 @@
             // Exibir os resultados na página
             results.forEach(content => {
                 const contentItem = document.createElement('div');
-                contentItem.className = 'bg-white p-4 rounded shadow content-item';
+                contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-72';
 
                 let contentHtml = '';
 
@@ -53,7 +122,7 @@
                     case 'video':
                         const videoSrc = content.src.includes('youtube') ? content.src.replace('watch?v=', 'embed/') : content.src;
                         contentHtml = `
-                            <video preload="metadata" class="w-full h-52 object-cover" controls>
+                            <video preload="metadata" class="w-full fixed-height object-cover" controls>
                                 <source src="${content.src}" type="video/mp4">
                                 Seu navegador não suporta o elemento de vídeo.
                             </video>
@@ -62,13 +131,13 @@
                         break;
                     case 'pdf':
                         contentHtml = `
-                            <embed src="${content.src}" type="application/pdf" class="w-full h-52 object-cover" />
+                            <embed src="${content.src}" type="application/pdf" class="w-full fixed-height object-cover" />
                             <a href="${content.src}" download="${content.title}.pdf" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'audiobook':
                         contentHtml = `
-                            <audio controls class="w-full h-52 object-cover">
+                            <audio controls class="w-full fixed-height object-cover">
                                 <source src="${content.src}" type="audio/mpeg">
                                 Seu navegador não suporta o elemento de áudio.
                             </audio>
@@ -77,19 +146,19 @@
                         break;
                     case 'image':
                         contentHtml = `
-                            <img src="${content.src}" alt="${content.title}" class="w-full h-52 object-cover">
+                            <img src="${content.src}" alt="${content.title}" class="w-full fixed-height object-cover">
                             <a href="${content.src}" download="${content.title}.jpg" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'animation':
                         contentHtml = `
-                            <img src="${content.src}" alt="${content.title}" class="w-full h-52 object-cover">
+                            <img src="${content.src}" alt="${content.title}" class="w-full fixed-height object-cover">
                             <a href="${content.src}" download="${content.title}.gif" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
                     case 'apresentacao':
                         contentHtml = `
-                            <iframe src="${content.src}/preview" class="w-full h-96" allowfullscreen></iframe>
+                            <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(content.src)}" class="w-full fixed-height" frameborder="0"></iframe>
                             <a href="${content.src}" download="${content.title}.pptx" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
                         `;
                         break;
