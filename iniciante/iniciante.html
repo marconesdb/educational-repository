@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Educacional</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Adicione estilos adicionais aqui, se necessário */
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="navbar-logo">
+                <img src="./img/icone-python.png" alt="Ícone Python">
+                <a href="index.html" class="text-2xl font-bold">Python Start</a>
+            </div>
+            <div class="nav-items">
+                <a href="index.html">
+                    <li class="list-none">Início</li>
+                </a>
+                <div class="dropdown">
+                    <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4 text-center">Conteúdo Educacional</h1>
+        <div id="content-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white p-4 mt-auto">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Repositório Educacional - Python Start. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="">
+      document.addEventListener('DOMContentLoaded', function () {
+        const contentList = document.getElementById('content-list');
+    
+        // Fetch dos resultados da pesquisa do arquivo JSON
+        fetch('conteudos.json')
+            .then(response => response.json())
+            .then(results => {
+                // Exibir os resultados na página
+                results.forEach(content => {
+                    const contentItem = document.createElement('div');
+                    contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-72';
+    
+                    let contentHtml = '';
+    
+                    switch (content.type) {
+                        case 'video':
+                            const videoId = getYoutubeVideoId(content.src);
+                            contentHtml = `
+                                <div class="relative">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="w-full fixed-height object-cover"></iframe>
+                                </div>
+                            `;
+                            break;
+                        case 'pdf':
+                            contentHtml = `
+                                <img src="${content.thumbnail || './img/icone-pdf.png'}" alt="${content.title}" class="w-full fixed-height object-cover">
+                                <a href="${content.src}" download="${content.title}.pdf" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                            `;
+                            break;
+                        case 'apresentacao':
+                            contentHtml = `
+                                <img src="${content.thumbnail || './img/icone-pptx.png'}" alt="${content.title}" class="w-full fixed-height object-cover">
+                                <a href="${content.src}" download="${content.title}.pptx" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
+                            `;
+                            break;
+                    }
+    
+                    contentItem.innerHTML = `
+                        ${contentHtml}
+                        <h2 class="text-xl font-bold mt-4">${content.title}</h2>
+                        <p>${content.description}</p>
+                    `;
+    
+                    contentList.appendChild(contentItem);
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao obter os resultados da pesquisa:', error);
+            });
+    
+        // Função para obter o ID do vídeo do YouTube a partir do link
+        function getYoutubeVideoId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+    });
+    
+    </script>
+</body>
+
+</html>

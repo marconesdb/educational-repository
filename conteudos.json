@@ -3,11 +3,11 @@
       "type": "video",
       "title": "testes",
       "description": "Introdução à Álgebra",
-      "src": "./repositorio/videos/MEMES DO CAIXÃO/MEMES DO CAIXÃO [download ] (720p_25fps_H264-128kbit_AAC).mp4"
+      "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
   },
   {
     "type": "video",
-    "title": "Aula de Matemática",
+    "title": "Aula de teste",
     "description": "Introdução à Álgebra",
     "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
 },
@@ -54,7 +54,8 @@
       "type": "pdf",
       "title": "Apostila de teste",
       "description": "Conceitos Básicos de Física",
-      "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf"
+      "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
+      "thumbnail": "./img/icone-pdf.png"
   },
 
   {
@@ -79,51 +80,15 @@
   "description": "Conceitos Básicos de Física",
   "src": "apostila-fisica.pdf"
 },
-  {
-      "type": "audiobook",
-      "title": "Audiobook de teste",
-      "description": "História do teste",
-      "src": "./repositorio/audiobooks/thinking-time-148496.mp3"
-  },
-  {
-      "type": "image",
-      "title": "Imagem teste",
-      "description": "Mapa Mundi",
-      "src": "./repositorio/imagens/voluntariosdaalegria.jpeg"
-  },
-  {
-      "type": "animation",
-      "title": "Animação de teste",
-      "description": "Reações Químicas",
-      "src": "./repositorio/animacoes/GifTeste.gif"
-  },
-
-  {
-    "type": "animation",
-    "title": "Animação de Biologia",
-    "description": "Reino Vegetal",
-    "src": "reino-vegetal.gif"
-  },
-
-  {
-    "type": "animation",
-    "title": "Animação de Fisíca",
-    "description": "Eletricidade e Magnetismo",
-    "src": "eletricidade e magnetismo.gif"
-  },
-
-  {
-    "type": "animation",
-    "title": "Animação de Geografia",
-    "description": "Meio Ambiente",
-    "src": "meio-ambiente.gif"
-  },
+  
 
   {
     "type": "apresentacao",
     "title": "Palestra de Geografia teste",
     "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx"
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
+    "thumbnail": "./img/icone-pptx.png"
   }
+  
 ]
 
