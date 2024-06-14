@@ -100,9 +100,9 @@
             <div class="dropdown">
                 <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="./iniciante/iniciante.html">Introdução ao Python</a>
+                    <a href="./intermediario/intermediario.html">Python Nível Intermediário</a>
+                    <a href="./avancado/avancado.html">Python Nível Avançado</a>
                 </div>
             </div>
         </div>
@@ -141,33 +141,34 @@
             const searchForm = document.getElementById('searchForm');
             const searchInput = document.getElementById('search');
             const searchIcon = document.getElementById('searchIcon');
-
+    
             function handleSearch(event) {
                 event.preventDefault();
-
+    
                 const query = searchInput.value.trim().toLowerCase();
-
+    
                 if (query === '') {
                     return;
                 }
-
+    
                 fetch('conteudos.json')
                     .then(response => response.json())
                     .then(contents => {
                         const filteredContents = contents.filter(content =>
                             content.title.toLowerCase().includes(query)
                         );
-
+    
                         const searchParams = new URLSearchParams();
                         searchParams.append('results', JSON.stringify(filteredContents));
-                        window.location.href = `conteudo.html?${searchParams.toString()}`;
+                        window.location.href = `conteudo.html?query=${encodeURIComponent(query)}`;
                     })
                     .catch(error => console.error('Erro ao carregar conteúdos:', error));
             }
-
+    
             searchForm.addEventListener('submit', handleSearch);
             searchIcon.addEventListener('click', handleSearch);
         });
     </script>
+    
 </body>
 </html>

@@ -1,94 +1,146 @@
+
+
 [
-  {
-      "type": "video",
-      "title": "testes",
-      "description": "Introdução à Álgebra",
-      "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-  },
+ 
   {
     "type": "video",
-    "title": "Aula de teste",
+    "title": "Iniciante",
     "description": "Introdução à Álgebra",
-    "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-
-{
-  "type": "video",
-  "title": "Aula de Matemática",
-  "description": "Introdução à Álgebra",
-  "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-{
-  "type": "video",
-  "title": "Aula de Matemática",
-  "description": "Introdução à Álgebra",
-  "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-
-{
-  "type": "video",
-  "title": "Aula de Matemática",
-  "description": "Introdução à Álgebra",
-  "src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-{
-"type": "video",
-"title": "Aula de Matemática",
-"description": "Introdução à Álgebra",
-"src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-
-{
-"type": "video",
-"title": "Aula de Matemática",
-"description": "Introdução à Álgebra",
-"src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-{
-"type": "video",
-"title": "Aula de Matemática",
-"description": "Introdução à Álgebra",
-"src": "https://www.youtube.com/watch?v=vMP1omVE4as"
-},
-  {
-      "type": "pdf",
-      "title": "Apostila de teste",
-      "description": "Conceitos Básicos de Física",
-      "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
-      "thumbnail": "./img/icone-pdf.png"
+    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
   },
+
+
+
+  {
+    "type": "video",
+    "title": "Intermediário",
+    "description": "Introdução à Álgebra",
+    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+
+  {
+    "type": "video",
+    "title": "Avançado",
+    "description": "Introdução à Álgebra",
+    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
 
   {
     "type": "pdf",
-    "title": "Apostila de Física",
+    "title": "Iniciante",
     "description": "Conceitos Básicos de Física",
-    "src": "apostila-fisica.pdf"
-},
+    "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um pdf introdutório para iniciantes."
+  },
 
 
-{
-  "type": "pdf",
-  "title": "Apostila de Física",
-  "description": "Conceitos Básicos de Física",
-  "src": "apostila-fisica.pdf"
-},
+  {
+    "type": "pdf",
+    "title": "Iniciante",
+    "description": "Conceitos Básicos de Física",
+    "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um pdf introdutório para iniciantes."
+  },
 
 
-{
-  "type": "pdf",
-  "title": "Apostila de Física",
-  "description": "Conceitos Básicos de Física",
-  "src": "apostila-fisica.pdf"
-},
+  {
+    "type": "pdf",
+    "title": "Intermediário",
+    "description": "Conceitos Básicos de Física",
+    "src": "apostila-fisica.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um pdf  para o nível intermediário."
+  },
+
+
+  {
+    "type": "pdf",
+    "title": "Intermediário",
+    "description": "Conceitos Básicos de Física",
+    "src": "apostila-fisica.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um pdf  para o nível intermediário."
+  },
+
+
+  {
+    "type": "pdf",
+    "title": "Avançado",
+    "description": "Conceitos Básicos de Física",
+    "src": "apostila-fisica.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "avancado",
+    "_comment": "Este objeto representa um pdf para o nível avançado."
+  },
   
 
   {
     "type": "apresentacao",
-    "title": "Palestra de Geografia teste",
+    "title": "Iniciante",
     "description": "Meio Ambiente",
     "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png"
-  }
+    "thumbnail": "./img/icone-pptx.png",
+    "category": "iniciante",
+     "_comment": "Este objeto representa uma apresentação introdutória para iniciantes."
+  },
+
+
+  {
+    "type": "apresentacao",
+    "title": "Intermediário",
+    "description": "Meio Ambiente",
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
+    "thumbnail": "./img/icone-pptx.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa uma apresentação para o nível intermediário."
+  },
+
+
+  {
+    "type": "apresentacao",
+    "title": "Avançado",
+    "description": "Meio Ambiente",
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
+    "thumbnail": "./img/icone-pptx.png",
+    "category": "avancado",
+    "_comment": "Este objeto representa uma apresentação para o nível avançado."
+  },
+
   
+  {
+    "type": "apresentacao",
+    "title": "Avançado",
+    "description": "Meio Ambiente",
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
+    "thumbnail": "./img/icone-pptx.png",
+    "category": "avancado",
+    "_comment": "Este objeto representa uma apresentação para o nível avançado."
+  },
+
+  
+  {
+    "type": "apresentacao",
+    "title": "Avançado",
+    "description": "Meio Ambiente",
+    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
+    "thumbnail": "./img/icone-pptx.png",
+    "category": "avancado",
+    "_comment": "Este objeto representa uma apresentação para o nível avançado."
+  }
+ 
 ]
 

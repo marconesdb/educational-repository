@@ -61,6 +61,26 @@
             align-items: center;
             gap: 1rem;
         }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #000;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 1s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -79,9 +99,9 @@
                 <div class="dropdown">
                     <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="./iniciante/iniciante.html">Introdução ao Python</a>
+                        <a href="./intermediario/intermediario.html">Python Nível Intermediário</a>
+                        <a href="./avancado/avancado.html">Python Nível Avançado</a>
                     </div>
                 </div>
             </div>
@@ -91,6 +111,7 @@
     <!-- Conteúdo Principal -->
     <div class="container mx-auto p-4 flex-grow">
         <h1 class="text-3xl font-bold mb-4 text-center">Resultados da Pesquisa</h1>
+        <div id="loadingSpinner" class="spinner"></div>
         <div id="content-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center"></div>
     </div>
 
@@ -105,18 +126,41 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const contentList = document.getElementById('content-list');
-
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('query') ? urlParams.get('query').toLowerCase() : '';
+    
+            if (!query) {
+                contentList.innerHTML = '<p class="text-center text-gray-600">Nenhum resultado encontrado.</p>';
+                loadingSpinner.style.display = 'none';
+                return;
+            }
+    
             // Obter os resultados da pesquisa do arquivo JSON
             fetch('conteudos.json')
                 .then(response => response.json())
-                .then(results => {
+                .then(contents => {
+                    const filteredContents = contents.filter(content =>
+                        content.title.toLowerCase().includes(query) ||
+                        content.type.toLowerCase().includes(query) ||
+                        content.description.toLowerCase().includes(query) ||
+                        content.category.toLowerCase().includes(query)
+                    );
+    
+                    loadingSpinner.style.display = 'none';
+    
+                    if (filteredContents.length === 0) {
+                        contentList.innerHTML = '<p class="text-center text-gray-600">Nenhum resultado encontrado.</p>';
+                        return;
+                    }
+    
                     // Exibir os resultados na página
-                    results.forEach(content => {
+                    filteredContents.forEach(content => {
                         const contentItem = document.createElement('div');
                         contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-72';
-
+    
                         let contentHtml = '';
-
+    
                         switch (content.type) {
                             case 'video':
                                 if (content.src.includes('youtube.com')) {
@@ -149,20 +193,22 @@
                                 `;
                                 break;
                         }
-
+    
                         contentItem.innerHTML = `
                             ${contentHtml}
                             <h2 class="text-xl font-bold mt-4">${content.title}</h2>
                             <p>${content.description}</p>
                         `;
-
+    
                         contentList.appendChild(contentItem);
                     });
                 })
                 .catch(error => {
                     console.error('Erro ao obter os resultados da pesquisa:', error);
+                    loadingSpinner.style.display = 'none';
+                    contentList.innerHTML = '<p class="text-center text-gray-600">Erro ao carregar os conteúdos.</p>';
                 });
-
+    
             // Função para obter o ID do vídeo do YouTube a partir do link
             function getYoutubeVideoId(url) {
                 const regExp = /^.*(youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
@@ -171,6 +217,7 @@
             }
         });
     </script>
+    
 </body>
 
 </html>
