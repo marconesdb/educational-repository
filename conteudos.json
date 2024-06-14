@@ -4,20 +4,113 @@
  
   {
     "type": "video",
-    "title": "Iniciante",
-    "description": "Introdução à Álgebra",
-    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "title": "O Que é o Python? ",
+    "description": "Por que é a Melhor Linguagem de Programação para Começar?",
+    "src": "https://www.youtube.com/watch?v=DXmCU7v9glM&t=1s",
     "category": "iniciante",
     "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
   },
 
 
+  {
+    "type": "video",
+    "title": "Curso Básico de Python 2024",
+    "description": "Aula 1 do Curso Básico de Python do Canal Hashtag Programação",
+    "src": "https://www.youtube.com/watch?v=g_R_Asf6Co0",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
+  },
+
 
   {
     "type": "video",
-    "title": "Intermediário",
-    "description": "Introdução à Álgebra",
-    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "title": "Aprenda Python em 10min (para Iniciantes)",
+    "description": "Aula do Canal Hashtag Programação",
+    "src": "https://www.youtube.com/watch?v=4p7axLXXBGU",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
+  },
+
+
+  {
+    "type": "video",
+    "title": "Python do ZERO ao JÚNIOR",
+    "description": "Aula do Canal Programador Python",
+    "src": "https://www.youtube.com/watch?v=3J1xBL7zJXg",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
+  },
+
+  {
+    "type": "video",
+    "title": "Configuração do Ambiente para Python",
+    "description": "Aula do Canal Refatorando",
+    "src": "https://www.youtube.com/watch?v=Jk4kuuwLThA&list=PLj7gJIFoP7jdirAFg-fHe9HKOnGLGXSHZ",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um vídeo introdutório para iniciantes."
+  },
+
+ 
+
+  {
+    "type": "video",
+    "title": "Exercício #001 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=nIHq1MtJaKs&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=1",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Exercício #002 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=FNqdV5Zb_5Q&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=2",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Exercício #003 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=PB254Cfjlyk&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=3",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Exercício #004 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=tHYxjJxtJko&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=4",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Exercício #005 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=664e0G_S9nU&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=5",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Exercício #006 de Python (Nível Intermediário)",
+    "description": "Exercício de Python (Nível Intermediário) do Canal Curso em Vídeo",
+    "src": "https://www.youtube.com/watch?v=mqcNw_dhl8I&list=PLHz_AreHm4dm6wYOIW20Nyg12TAjmMGT-&index=7",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Estruturas de dados no Python - Pilha",
+    "description": "Vídeo explicativo sobre estrutura de dados em Python",
+    "src": "https://www.youtube.com/watch?v=9-M3QUMd290",
     "category": "intermediario",
     "_comment": "Este objeto representa um vídeo  para o nível intermediário."
   },
@@ -25,9 +118,27 @@
 
   {
     "type": "video",
+    "title": "Dicionários e Estruturas de Dados no Python",
+    "description": "Vídeo explicativo sobre Dicionários e Estrutura de dados em Python",
+    "src": "https://www.youtube.com/watch?v=fYEQ1hH87Io",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
+    "title": "Funções recursivas em Python",
+    "description": "Vídeo explicativo sobre Funções recursivas em Python",
+    "src": "https://www.youtube.com/watch?v=0PwFwqiNfAI&list=PLbIBj8vQhvm0-RUXh2_sw-nnQUxndFZqU",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um vídeo  para o nível intermediário."
+  },
+
+  {
+    "type": "video",
     "title": "Avançado",
-    "description": "Introdução à Álgebra",
-    "src": "https://www.youtube.com/watch?v=vMP1omVE4as",
+    "description": "Curso de Introdução à Análise de Dados Públicos - Com Python ( Nível Avançado ) do Canal Python para Zumbis",
+    "src": "https://www.youtube.com/watch?v=NIYsAtTpJ5M&list=PLUukMN0DTKCu6g2Lq1KXLnIX6Ilk4DAPI",
     "category": "avancado",
     "_comment": "Este objeto representa um vídeo  para o nível avançado."
   },
@@ -35,8 +146,30 @@
 
   {
     "type": "pdf",
-    "title": "Iniciante",
-    "description": "Conceitos Básicos de Física",
+    "title": "Introdução ao Python",
+    "description": "Apostila de Conceitos Básicos da Linguagem  de Programação Python da Universidade Estadual Paulista-UNESP",
+    "src": "./repositorio/pdfs/E-books - iniciante/Introdução ao Python.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um pdf introdutório para iniciantes."
+  },
+
+
+  {
+    "type": "pdf",
+    "title": "Introdução à Linguagem de Programação Python",
+    "description": "Apostila de Rafael Sachetto Oliveira - Universidade Federal de São João del Rei",
+    "src": "./repositorio/pdfs/E-books - iniciante/Introdução à linguagem de programação Python.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "iniciante",
+    "_comment": "Este objeto representa um pdf introdutório para iniciantes."
+  },
+
+
+  {
+    "type": "pdf",
+    "title": "Curso Introdutório de Python",
+    "description": "Apostila feita por Grupy-Sanca, um grupo de colaboradores e estudantes",
     "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
     "thumbnail": "./img/icone-pdf.png",
     "category": "iniciante",
@@ -46,20 +179,9 @@
 
   {
     "type": "pdf",
-    "title": "Iniciante",
-    "description": "Conceitos Básicos de Física",
-    "src": "./repositorio/pdfs/5.1-Padrões de arquitetura.pptx.pdf",
-    "thumbnail": "./img/icone-pdf.png",
-    "category": "iniciante",
-    "_comment": "Este objeto representa um pdf introdutório para iniciantes."
-  },
-
-
-  {
-    "type": "pdf",
-    "title": "Intermediário",
-    "description": "Conceitos Básicos de Física",
-    "src": "apostila-fisica.pdf",
+    "title": "Apostila de Python",
+    "description": "Conceitos intermediários da Linguagem de Programação Python feita pelo Profº, Alberto Wander Sá dos Santos para o curso Técnico em Informática do Colégio UniVap",
+    "src": "./repositorio/pdfs/E-books - intermediário/Apostila de Python.pdf",
     "thumbnail": "./img/icone-pdf.png",
     "category": "intermediario",
     "_comment": "Este objeto representa um pdf  para o nível intermediário."
@@ -68,9 +190,30 @@
 
   {
     "type": "pdf",
-    "title": "Intermediário",
-    "description": "Conceitos Básicos de Física",
-    "src": "apostila-fisica.pdf",
+    "title": "Apostila - Python 101",
+    "description": "Apostila criada a partir do minicurso sobre Python ministrado pelos alunos da Universidade Federal de Santa Maria, campus Cachoeira do Sul",
+    "src": "./repositorio/pdfs/E-books - intermediário/Apostila_Python_v_1.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um pdf  para o nível intermediário."
+  },
+
+  {
+    "type": "pdf",
+    "title": "Apostila - Introdução a Computação em Python Problemas e Aplicações",
+    "description": "Apostila com exercícios práticos e soluções feita pelo Prof. Alexandre Luis Magalhães Levada da Universidade Federal de São Carlos",
+    "src": "./repositorio/pdfs/E-books - intermediário/Introdução a Computação em Python Problemas e Aplicações.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um pdf  para o nível intermediário."
+  },
+
+
+  {
+    "type": "pdf",
+    "title": "Programação com Python",
+    "description": "Programação com Python - Material de apoio à ação docente feita pela Secretaria de Educação e Esportes do Estado de Pernambuco",
+    "src": "./repositorio/pdfs/E-books - intermediário/Programacao-em-Python.pdf",
     "thumbnail": "./img/icone-pdf.png",
     "category": "intermediario",
     "_comment": "Este objeto representa um pdf  para o nível intermediário."
@@ -88,26 +231,7 @@
   },
   
 
-  {
-    "type": "apresentacao",
-    "title": "Iniciante",
-    "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png",
-    "category": "iniciante",
-     "_comment": "Este objeto representa uma apresentação introdutória para iniciantes."
-  },
-
-
-  {
-    "type": "apresentacao",
-    "title": "Intermediário",
-    "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png",
-    "category": "intermediario",
-    "_comment": "Este objeto representa uma apresentação para o nível intermediário."
-  },
+ 
 
 
   {
