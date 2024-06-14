@@ -1,0 +1,85 @@
+/* Estilos gerais para a logo da navbar */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para a imagem da logo */
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Estilos para o dropdown do menu */
+.dropdown {
+  position: relative;
+}
+
+/* Estilos para o conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Estilos para os links dentro do dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Estilos para o hover dos links do dropdown */
+.dropdown-content a:hover {
+  background-color: #FFD43B; /* Tailwind yellow-400 */
+  color: black;
+}
+
+/* Exibe o dropdown quando o botão é hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos para o botão do dropdown no hover */
+.dropdown:hover .dropbtn {
+  background-color: #FFD43B; /* Tailwind yellow-400 */
+}
+
+/* Altura fixa para os cards */
+.fixed-height {
+  height: 20rem; /* Defina uma altura fixa consistente para todos os cards */
+}
+
+/* Estilos para os itens da navbar */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos para o grid de cards */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo com no mínimo 280px de largura */
+  gap: 2rem; /* Espaçamento entre os cards */
+  margin-top: 2rem; /* Margem superior para separar da navegação */
+}
+
+/* Estilos para os itens de conteúdo */
+.content-item {
+  background-color: #ffffff; /* Fundo branco para os cards */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para os cards */
+}
+
+/* Estilos para o título */
+.titulo {
+  background-color: #FFD43B;
+}

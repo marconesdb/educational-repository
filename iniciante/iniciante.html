@@ -5,123 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introdução ao Python</title>
+    <!-- Link para o Tailwind CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar-logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #FFD43B; /* Tailwind yellow-400 */
-            color: black;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #FFD43B; /* Tailwind yellow-400 */
-        }
-
-        .fixed-height {
-            height: 20rem; /* Defina uma altura fixa consistente para todos os cards */
-        }
-
-        .nav-items {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        /* Estilos para o grid de cards */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo com no mínimo 280px de largura */
-            gap: 2rem; /* Espaçamento entre os cards */
-            margin-top: 2rem; /* Margem superior para separar da navegação */
-        }
-
-        .content-item {
-            background-color: #ffffff; /* Fundo branco para os cards */
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para os cards */
-        }
-
-        .titulo{
-          background-color: #FFD43B;
-          
-        }
-    </style>
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="iniciante.css">
 </head>
 
 <body class="bg-gray-100 flex flex-col min-h-screen">
-    <!-- Navbar -->
-    <nav class="bg-blue-500 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="navbar-logo">
-                <img src="../img/icone-python.png" alt="Ícone Python">
-                <a href="../index.html" class="text-2xl font-bold">Python Start</a>
-            </div>
-            <div class="nav-items">
-                <a href="../index.html">
-                    <li class="list-none">Início</li>
-                </a>
-                <div class="dropdown">
-                    <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
-                    <div class="dropdown-content">
-                      <a href="./iniciante.html">Introdução ao Python</a>
-                      <a href="../intermediario/intermediario.html">Python Nível Intermediário</a>
-                      <a href="../avancado/avancado.html">Python Nível Avançado</a>
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="bg-blue-500 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="navbar-logo">
+                    <!-- Logo do site -->
+                    <img src="../img/icone-python.png" alt="Ícone Python">
+                    <!-- Link para a página inicial -->
+                    <a href="../index.html" class="text-2xl font-bold">Python Start</a>
+                </div>
+                <div class="nav-items">
+                    <!-- Link para a página inicial -->
+                    <a href="../index.html">
+                        <li class="list-none">Início</li>
+                    </a>
+                    <!-- Menu dropdown -->
+                    <div class="dropdown">
+                        <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
+                        <div class="dropdown-content">
+                            <!-- Links para diferentes seções do site -->
+                            <a href="./iniciante.html">Introdução ao Python</a>
+                            <a href="../intermediario/intermediario.html">Python Nível Intermediário</a>
+                            <a href="../avancado/avancado.html">Python Nível Avançado</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Conteúdo Principal -->
-    <div class="container mx-auto p-4 flex-grow" id="content-list">
-      <!-- Título -->
-      <div class="titulo p-2 text-center">
-          <h3 class="text-xl font-bold">Introdução ao Python, primeiros passos, sintaxe básica</h3>
-      </div>
-      
-      <!-- O conteúdo será carregado dinamicamente aqui -->
-      <div class="grid-container" id="content-grid">
-          <!-- Grid para os cards -->
-      </div>
-    </div>
+    <!-- Conteúdo principal do site -->
+    <main>
+        <section>
+            <div class="container mx-auto p-4 flex-grow" id="content-list">
+                <!-- Título -->
+                <div class="titulo p-2 text-center">
+                    <h3 class="text-xl font-bold">Introdução ao Python, primeiros passos, sintaxe básica</h3>
+                </div>
+                <!-- O conteúdo será carregado dinamicamente aqui -->
+                <div class="grid-container" id="content-grid">
+                    <!-- Grid para os cards -->
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- Rodapé do site -->
     <footer class="bg-blue-500 text-white p-4 mt-auto">
         <div class="container mx-auto text-center">
             &copy; 2024 Repositório Educacional - Python Start. Todos os direitos reservados.
@@ -129,84 +67,7 @@
     </footer>
 
     <!-- Script JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contentGrid = document.getElementById('content-grid');
-
-            // URL do arquivo conteudos.json
-            const conteudosJsonUrl = '../conteudos.json';
-
-            // Função para carregar e exibir o conteúdo do JSON
-            function carregarConteudos() {
-                fetch(conteudosJsonUrl)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Erro ao carregar o arquivo JSON');
-                        }
-                        return response.json();
-                    })
-                    .then(results => {
-                        // Filtrar apenas os conteúdos da categoria 'iniciante'
-                        const conteudosIniciantes = results.filter(content => content.category === 'iniciante');
-
-                        // Limpar conteúdo existente, se houver
-                        contentGrid.innerHTML = '';
-
-                        // Iterar sobre os resultados filtrados e criar elementos HTML correspondentes
-                        conteudosIniciantes.forEach(content => {
-                            const contentItem = document.createElement('div');
-                            contentItem.className = 'bg-white p-4 rounded shadow content-item';
-
-                            let contentHtml = '';
-
-                            switch (content.type) {
-                                case 'video':
-                                    const videoId = getYoutubeVideoId(content.src);
-                                    contentHtml = `
-                                        <div class="relative fixed-height">
-                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="w-full h-full object-cover"></iframe>
-                                        </div>
-                                    `;
-                                    break;
-                                case 'pdf':
-                                    contentHtml = `
-                                        <img src="${ '../img/icone-pdf.png'}" alt="${content.title}" class="w-full h-auto object-cover">
-                                        <a href="${content.src}" download="${content.title}.pdf" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
-                                    `;
-                                    break;
-                                case 'apresentacao':
-                                    contentHtml = `
-                                        <img src="${'../img/icone-pptx.png'}" alt="${content.title}" class="w-full h-auto  object-cover">
-                                        <a href="${content.src}" download="${content.title}.pptx" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
-                                    `;
-                                    break;
-                            }
-
-                            contentItem.innerHTML = `
-                                ${contentHtml}
-                                <h2 class="text-xl font-bold mt-4">${content.title}</h2>
-                                <p>${content.description}</p>
-                            `;
-
-                            contentGrid.appendChild(contentItem);
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Erro ao carregar conteúdos:', error);
-                    });
-            }
-
-            // Função para obter o ID do vídeo do YouTube a partir do link
-            function getYoutubeVideoId(url) {
-                const regExp = /^.*(youtu.be\/|v\/|e\/|u\/\\w+\/|embed\/|v=)([^#\\&\\?]*).*/;
-                const match = url.match(regExp);
-                return (match && match[2].length === 11) ? match[2] : null;
-            }
-
-            // Chamar a função para carregar os conteúdos quando a página é carregada
-            carregarConteudos();
-        });
-    </script>
+    <script src="iniciante.js"></script>
 </body>
 
 </html>

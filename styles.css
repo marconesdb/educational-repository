@@ -1,0 +1,140 @@
+/* Estilos gerais */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que a altura mínima da página seja igual à altura da viewport */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+  background-color: #1E40AF; /* Azul escuro */
+  color: white;
+  padding: 1rem 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Dropdown para o menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #FFD43B;
+}
+
+/* Estilos para o conteúdo principal */
+.search-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative; /* Necessário para o posicionamento absoluto do ícone */
+}
+
+.search-input {
+  width: calc(100% - 3rem);
+  height: 3.7rem;
+  padding: 1rem 3rem 1rem 2rem; /* Aumentei o padding à direita para acomodar o ícone */
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.95rem; /* Posicionado à esquerda dentro do input */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #6b7280;
+}
+
+.img-principal {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+/* Estilos para o rodapé */
+.footer {
+  background-color: #1E40AF; /* Azul escuro */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  margin-top: auto; /* Mantém o footer no final da página */
+}
+
+/* Estilos de hover */
+.dropbtn:hover,
+.dropdown-content a:hover {
+  background-color: #FFD43B;
+  color: black;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .navbar-logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+  }
+
+  .search-input {
+      width: calc(100% - 2rem);
+  }
+
+  .search-icon {
+      width: 1rem;
+      height: 1rem;
+  }
+}

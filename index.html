@@ -4,183 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Start</title>
+    <!-- Inclusão do Tailwind CSS para estilos rápidos e responsivos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Estilos gerais */
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garante que a altura mínima da página seja igual à altura da viewport */
-            
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .navbar {
-            background-color: #1E40AF; /* Azul escuro */
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-            margin-left: 1rem;
-        }
-
-        .navbar-logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #FFD43B;
-        }
-
-        /* Estilos para o conteúdo principal */
-        .search-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative; /* Necessário para o posicionamento absoluto do ícone */
-        }
-
-        .search-input {
-            width: calc(100% - 3rem);
-            height: 3.7rem;
-            padding: 1rem 3rem 1rem 2rem; /* Aumentei o padding à direita para acomodar o ícone */
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            font-size: 1rem;
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 1.95rem; /* Posicionado à esquerda dentro do input */
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 1.5rem;
-            height: 1.5rem;
-            fill: #6b7280;
-        }
-
-        .img-principal {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 2rem;
-        }
-
-        /* Estilos para o footer */
-        .footer {
-            background-color: #1E40AF; /* Azul escuro */
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            width: 100%;
-            margin-top: auto; /* Mantém o footer no final da página */
-        }
-
-        /* Estilos de hover */
-        .dropbtn:hover,
-        .dropdown-content a:hover {
-            background-color: #FFD43B;
-            color: black;
-        }
-
-        /* Estilos para telas menores */
-        @media screen and (max-width: 768px) {
-            .navbar-logo img {
-                width: 30px;
-                height: 30px;
-                margin-right: 8px;
-            }
-
-            .search-input {
-                width: calc(100% - 2rem);
-            }
-
-            .search-icon {
-                width: 1rem;
-                height: 1rem;
-            }
-        }
-    </style>
+    <!-- Link para o arquivo de estilos personalizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-200 flex flex-col">
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="navbar-logo">
-                <img src="./img/icone-python.png" alt="Ícone Python">
-                <a href="index.html" class="text-xl md:text-2xl font-bold">Python Start</a>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn text-white py-2 px-4 rounded">Menu</button>
-                <div class="dropdown-content">
-                    <a href="./iniciante/iniciante.html">Introdução ao Python</a>
-                    <a href="./intermediario/intermediario.html">Python Nível Intermediário</a>
-                    <a href="./avancado/avancado.html">Python Nível Avançado</a>
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="navbar">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="navbar-logo">
+                    <!-- Logo do site -->
+                    <img src="./img/icone-python.png" alt="Ícone Python">
+                    <!-- Link para a página inicial -->
+                    <a href="index.html" class="text-xl md:text-2xl font-bold">Python Start</a>
+                </div>
+                <!-- Menu dropdown -->
+                <div class="dropdown">
+                    <button class="dropbtn text-white py-2 px-4 rounded">Menu</button>
+                    <div class="dropdown-content">
+                        <!-- Links para diferentes seções do site -->
+                        <a href="./iniciante/iniciante.html">Introdução ao Python</a>
+                        <a href="./intermediario/intermediario.html">Python Nível Intermediário</a>
+                        <a href="./avancado/avancado.html">Python Nível Avançado</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Banner com Função de Pesquisa -->
-    <div class="bg-blue-000 p-8">
-        <div class="container mx-auto text-center">
-            <img src="./img/img-repositorio.png" alt="Imagem de banner" class="mx-auto mb-4 img-principal">
-            <h4 class="text-2xl md:text-3xl font-bold mb-4">Bem-vindo ao Repositório Educacional Python Start</h4>
-            <form id="searchForm" class="search-container">
-                <input type="text" id="search" placeholder="Digite para pesquisar..." class="search-input">
-                <svg id="searchIcon" class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M10 2a8 8 0 0 1 5.3 13.7l5 5a1 1 0 0 1-1.4 1.4l-5-5A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 10 4z"/>
-                </svg>
-            </form>
-        </div>
-    </div>
+    <!-- Conteúdo principal do site -->
+    <main>
+        <!-- Seção com a função de pesquisa -->
+        <section>
+            <div class="bg-blue-000 p-8">
+                <div class="container mx-auto text-center">
+                    <!-- Imagem principal da seção -->
+                    <img src="./img/img-repositorio.png" alt="Imagem de banner" class="mx-auto mb-4 img-principal">
+                    <!-- Título de boas-vindas -->
+                    <h4 class="text-2xl md:text-3xl font-bold mb-4">Bem-vindo ao Repositório Educacional Python Start</h4>
+                    <!-- Formulário de pesquisa -->
+                    <form id="searchForm" class="search-container">
+                        <!-- Campo de texto para entrada de pesquisa -->
+                        <input type="text" id="search" placeholder="Digite para pesquisar..." class="search-input">
+                        <!-- Ícone de pesquisa -->
+                        <svg id="searchIcon" class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 2a8 8 0 0 1 5.3 13.7l5 5a1 1 0 0 1-1.4 1.4l-5-5A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 10 4z"/>
+                        </svg>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- Rodapé do site -->
     <footer class="footer">
         <div class="container mx-auto">
             &copy; 2024 Repositório Educacional - Python Start. Todos os direitos reservados.
@@ -188,39 +68,7 @@
     </footer>
 
     <!-- Script JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const searchForm = document.getElementById('searchForm');
-            const searchInput = document.getElementById('search');
-            const searchIcon = document.getElementById('searchIcon');
-    
-            function handleSearch(event) {
-                event.preventDefault();
-    
-                const query = searchInput.value.trim().toLowerCase();
-    
-                if (query === '') {
-                    return;
-                }
-    
-                fetch('conteudos.json')
-                    .then(response => response.json())
-                    .then(contents => {
-                        const filteredContents = contents.filter(content =>
-                            content.title.toLowerCase().includes(query)
-                        );
-    
-                        const searchParams = new URLSearchParams();
-                        searchParams.append('results', JSON.stringify(filteredContents));
-                        window.location.href = `conteudo.html?query=${encodeURIComponent(query)}`;
-                    })
-                    .catch(error => console.error('Erro ao carregar conteúdos:', error));
-            }
-    
-            searchForm.addEventListener('submit', handleSearch);
-            searchIcon.addEventListener('click', handleSearch);
-        });
-    </script>
+    <script src="pesquisa.js"></script>
     
 </body>
 </html>
