@@ -136,9 +136,78 @@
 
   {
     "type": "video",
-    "title": "Avançado",
-    "description": "Curso de Introdução à Análise de Dados Públicos - Com Python ( Nível Avançado ) do Canal Python para Zumbis",
-    "src": "https://www.youtube.com/watch?v=NIYsAtTpJ5M&list=PLUukMN0DTKCu6g2Lq1KXLnIX6Ilk4DAPI",
+    "title": "As 4 bibliotecas de Python mais importantes para visualização de dados",
+    "description": "",
+    "src": "https://www.youtube.com/watch?v=9o5JsutSgX0",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+
+  
+  {
+    "type": "video",
+    "title": "Como instalar bibliotecas no Python",
+    "description": "Qual sistema de gerenciamento de pacotes devemos utilizar para instalar bibliotecas no Python? Saiba também o que significa pip em Python e como usar o pip do Python!",
+    "src": "https://www.youtube.com/watch?v=cDqMbI02hRs",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+
+  {
+    "type": "video",
+    "title": "Python - Introdução a Biblioteca Matplotlib e Numpy ( P1 )",
+    "description": "A vídeo aula apresenta uma introdução as bibliotecas Matplotlib e Numpy do Python",
+    "src": "https://www.youtube.com/watch?v=QLACZgfUAhY",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+
+
+  {
+    "type": "video",
+    "title": "As Bibliotecas Mais Importantes do Python e os Módulos que Você tem que Saber",
+    "description": "A vídeo aula as Bibliotecas Mais Importantes do Python e os Módulos que Você tem que Saber",
+    "src": "https://www.youtube.com/watch?v=AW20pJS0RqA",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+  {
+    "type": "video",
+    "title": "Classes - Python Orientado a Objetos - Aula 35",
+    "description": "",
+    "src": "https://www.youtube.com/watch?v=RLVbB91A5-8&list=PLbIBj8vQhvm34qAAEEH_PdL2tMG9rz-P7",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+  {
+    "type": "video",
+    "title": "Métodos estáticos - Python Orientado a Objetos - Aula 37",
+    "description": "",
+    "src": "https://www.youtube.com/watch?v=fChIn5Agl90&list=PLbIBj8vQhvm34qAAEEH_PdL2tMG9rz-P7&index=3",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+
+  {
+    "type": "video",
+    "title": "@property - Getters e Setters - Python Orientado a Objetos - Aula 38",
+    "description": "",
+    "src": "https://www.youtube.com/watch?v=PGXwNophTOQ&list=PLbIBj8vQhvm34qAAEEH_PdL2tMG9rz-P7&index=5",
+    "category": "avancado",
+    "_comment": "Este objeto representa um vídeo  para o nível avançado."
+  },
+
+  {
+    "type": "video",
+    "title": "Métodos de Classes - Python Orientado a Objetos - Aula 36",
+    "description": "",
+    "src": "https://www.youtube.com/watch?v=ZTKeC1lae6I&list=PLbIBj8vQhvm34qAAEEH_PdL2tMG9rz-P7&index=4",
     "category": "avancado",
     "_comment": "Este objeto representa um vídeo  para o nível avançado."
   },
@@ -222,49 +291,26 @@
 
   {
     "type": "pdf",
-    "title": "Avançado",
-    "description": "Conceitos Básicos de Física",
-    "src": "apostila-fisica.pdf",
+    "title": "Introdução à programação orientada a objetos com Python",
+    "description": "Apostila de Introdução à programação orientada a objetos com Python",
+    "src": "./repositorio/pdfs/E-books - avançado/3 - PDA - Python - introducao a programação orientada a objetos.pdf",
     "thumbnail": "./img/icone-pdf.png",
     "category": "avancado",
     "_comment": "Este objeto representa um pdf para o nível avançado."
   },
-  
-
- 
-
 
   {
-    "type": "apresentacao",
-    "title": "Avançado",
-    "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png",
+    "type": "pdf",
+    "title": "Programação orientada a objetos com Python",
+    "description": "Apostila de Programação Orientada a Objetos com Python",
+    "src": "./repositorio/pdfs/E-books - avançado/apostila-python-orientacao-a-objetos.pdf",
+    "thumbnail": "./img/icone-pdf.png",
     "category": "avancado",
-    "_comment": "Este objeto representa uma apresentação para o nível avançado."
-  },
-
-  
-  {
-    "type": "apresentacao",
-    "title": "Avançado",
-    "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png",
-    "category": "avancado",
-    "_comment": "Este objeto representa uma apresentação para o nível avançado."
-  },
-
-  
-  {
-    "type": "apresentacao",
-    "title": "Avançado",
-    "description": "Meio Ambiente",
-    "src": "./repositorio/apresentacao/Palestra - Caridade para  com os Criminosos-1.pptx",
-    "thumbnail": "./img/icone-pptx.png",
-    "category": "avancado",
-    "_comment": "Este objeto representa uma apresentação para o nível avançado."
+    "_comment": "Este objeto representa um pdf para o nível avançado."
   }
+  
+
+
  
 ]
 
