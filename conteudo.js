@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
           // Exibir os resultados na página
           filteredContents.forEach(content => {
               const contentItem = document.createElement('div');
-              contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-72';
+
+              // Aumenta a largura do card em 1%
+              contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-96';
 
               let contentHtml = '';
 
@@ -47,21 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
                       // Verifica se é um link do YouTube
                       if (content.src.includes('youtube.com')) {
                           const videoId = getYoutubeVideoId(content.src);
-                          contentHtml = `
-                              <div class="relative">
-                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="w-full fixed-height object-cover"></iframe>
-                              </div>
-                          `;
-                      } else {
-                          contentHtml = `
-                              <video preload="metadata" class="w-full fixed-height object-cover" controls>
-                                  <source src="${content.src}" type="video/mp4">
-                                  Seu navegador não suporta o elemento de vídeo.
-                              </video>
-                              <a href="${content.src}" download="${content.title}.mp4" class="block bg-blue-500 text-white px-4 py-2 rounded mt-2 text-center">Download</a>
-                          `;
-                      }
-                      break;
+                          contentHtml = `<div class="relative" style="padding-bottom: calc(56.25% + 10%);">
+                          <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+                          </div>
+                            `;
+                        } 
+                        break;
                   case 'pdf':
                       contentHtml = `
                           <img src="${content.thumbnail || './img/icone-pdf.png'}" alt="${content.title}" class="w-full fixed-height object-cover">

@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
               // Iterar sobre os resultados filtrados e criar elementos HTML correspondentes
               conteudosAvancado.forEach(content => {
                   const contentItem = document.createElement('div');
-                  contentItem.className = 'bg-white p-4 rounded shadow content-item';
+                  
+                  // Aumenta a largura do card em 1%
+                  contentItem.className = 'bg-white p-4 rounded shadow content-item w-full sm:w-96';
 
                   let contentHtml = '';
 
@@ -33,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
                       case 'video':
                           const videoId = getYoutubeVideoId(content.src);
                           contentHtml = `
-                              <div class="relative fixed-height">
-                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="w-full h-full object-cover"></iframe>
-                              </div>
+                          <div class="relative" style="padding-bottom: calc(56.25% + 10%);">
+                          <iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+                          </div>
                           `;
                           break;
                       case 'pdf':
