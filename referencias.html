@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referências Bibliográficas</title>
+    <!-- Link para o Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="referencias.css">
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Barra de navegação -->
+        <nav class="bg-blue-500 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="navbar-logo">
+                    <!-- Logo do site -->
+                    <img src="../img/icone-python.png" alt="Ícone Python">
+                    <!-- Link para a página inicial -->
+                    <a href="./index.html" class="text-2xl font-bold">Python Start</a>
+                </div>
+                <div class="nav-items">
+                    <!-- Link para a página inicial -->
+                    <a href="./index.html">
+                        <li class="list-none">Início</li>
+                    </a>
+                    <!-- Menu dropdown -->
+                    <div class="dropdown">
+                        <button class="dropbtn bg-blue-500 text-white py-2 px-4 rounded">Menu</button>
+                        <div class="dropdown-content">
+                            <!-- Links para diferentes seções do site -->
+                            <a href="./iniciante/iniciante.html">Introdução ao Python</a>
+                            <a href="./intermediario/intermediario.html">Python Nível Intermediário</a>
+                            <a href="./avancado/avancado.html">Python Nível Avançado</a>
+                            <a href="./referencias.html">Referências</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section>
+            <div class="container mx-auto p-4 flex-grow" id="content-list">
+                <!-- Título -->
+                <div class="titulo p-2 text-center">
+                    <h1 class="text-xl font-bold">Referências Bibliográficas</h1>
+                </div>
+                <!-- Lista de Referências -->
+                <div class="referencias p-4 bg-white shadow rounded">
+                    <ul class="list-disc list-inside">
+                        <li class="mb-2">
+                            Al Sweigart. <em>Automate the Boring Stuff with Python: Practical Programming for Total Beginners</em>. No Starch Press, 2015.
+                        </li>
+                        <li class="mb-2">
+                            Eric Matthes. <em>Python Crash Course: A Hands-On, Project-Based Introduction to Programming</em>. No Starch Press, 2019.
+                        </li>
+                        <li class="mb-2">
+                            Mark Lutz. <em>Learning Python</em>. O'Reilly Media, 2013.
+                        </li>
+                        <li class="mb-2">
+                            Luciano Ramalho. <em>Fluent Python: Clear, Concise, and Effective Programming</em>. O'Reilly Media, 2015.
+                        </li>
+                        <li class="mb-2">
+                            David Beazley e Brian K. Jones. <em>Python Cookbook</em>. O'Reilly Media, 2013.
+                        </li>
+                        <li class="mb-2">
+                            John Zelle. <em>Python Programming: An Introduction to Computer Science</em>. Franklin, Beedle & Associates Inc., 2010.
+                        </li>
+                        <li class="mb-2">
+                            Wes McKinney. <em>Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython</em>. O'Reilly Media, 2017.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="bg-blue-500 text-white p-4 mt-auto">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Repositório Educacional - Python Start. Todos os direitos reservados. || Contato - marconetec@yahoo.com.br
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="referencias.js"></script>
+</body>
+</html>
