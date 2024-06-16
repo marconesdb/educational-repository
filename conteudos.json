@@ -291,6 +291,17 @@
 
   {
     "type": "pdf",
+    "title": "Exercícios Resolvidos de Python - Universidade Estadual do Sudoeste da Bahia - UESB",
+    "description": "Exercícios resolvidos utilizando Python - Governo do Estado da Bahia",
+    "src": "./repositorio/pdfs/E-books - intermediário/Exercicios-resolvidos-utilizando-Python-21.08.2023.pdf",
+    "thumbnail": "./img/icone-pdf.png",
+    "category": "intermediario",
+    "_comment": "Este objeto representa um pdf  para o nível intermediário."
+  },
+
+
+  {
+    "type": "pdf",
     "title": "Introdução à programação orientada a objetos com Python",
     "description": "Apostila de Introdução à programação orientada a objetos com Python",
     "src": "./repositorio/pdfs/E-books - avançado/3 - PDA - Python - introducao a programação orientada a objetos.pdf",
