@@ -1,3 +1,73 @@
+/* Estilos gerais para o corpo da página */
+body {
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Estilos para o container principal */
+.container {
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+  padding-left: 1rem; /* Adiciona um espaço de margem à esquerda */
+  padding-right: 1rem; /* Adiciona um espaço de margem à direita */
+}
+
+/* Estilos para o título */
+.titulo {
+  background-color: #FFD43B;
+}
+
+/* Estilos para a lista de conteúdos */
+#content-list {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Estilos para os itens da lista de conteúdos */
+.content-item {
+  width: 100%; /* Define a largura total do item */
+  max-width: 100%; /* Garante que o item não ultrapasse a largura da tela */
+  background-color: #ffffff; /* Fundo branco para os itens */
+  padding: 1rem; /* Espaçamento interno dos itens */
+  border-radius: 0.5rem; /* Bordas arredondadas nos itens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil nos itens */
+}
+
+/* Estilos para o título dentro dos itens */
+.content-item h2 {
+  margin-top: 1rem; /* Espaçamento superior do título */
+  font-size: 1.25rem; /* Tamanho do título */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilos para o parágrafo dentro dos itens */
+.content-item p {
+  margin-top: 0.5rem; /* Espaçamento superior do parágrafo */
+  font-size: 1rem; /* Tamanho do texto */
+  color: #333333; /* Cor do texto */
+}
+
+/* Estilos para o spinner de carregamento */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+/* Animação do spinner */
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Estilos para a navbar */
 /* Estilos gerais para a logo da navbar */
 .navbar-logo {
   display: flex;
@@ -9,6 +79,13 @@
   width: 40px;
   height: 40px;
   margin-right: 10px;
+}
+
+/* Estilos para os itens da navbar */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Estilos para o dropdown do menu */
@@ -49,38 +126,4 @@
 /* Estilos para o botão do dropdown no hover */
 .dropdown:hover .dropbtn {
   background-color: #FFD43B; /* Tailwind yellow-400 */
-}
-
-/* Altura fixa para os cards */
-.fixed-height {
-  height: 20rem; /* Defina uma altura fixa consistente para todos os cards */
-}
-
-/* Estilos para os itens da navbar */
-.nav-items {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Estilos para o spinner de carregamento */
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #000;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  animation: spin 1s linear infinite;
-  margin: auto;
-}
-
-/* Animação do spinner */
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-
-  100% {
-      transform: rotate(360deg);
-  }
 }

@@ -67,8 +67,8 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grid responsivo com no mínimo 280px de largura */
-  gap: 2rem; /* Espaçamento entre os cards */
-  margin-top: 2rem; /* Margem superior para separar da navegação */
+  gap: 1rem; /* Espaçamento entre os cards */
+  margin-top: 1rem; /* Margem superior para separar da navegação */
 }
 
 /* Estilos para os itens de conteúdo */
@@ -82,4 +82,20 @@
 /* Estilos para o título */
 .titulo {
   background-color: #FFD43B;
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+/* Container full width */
+.container-full {
+  width: calc(100% - 10px); /* 100% da largura menos a margem de 10px de cada lado */
+  margin: 5px;
+  box-sizing: border-box; /* Inclui a margem e o padding no cálculo da largura */
+}
+
+/* Responsividade para 5 colunas */
+@media (min-width: 1536px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas a partir de 1536px */
+  }
 }
